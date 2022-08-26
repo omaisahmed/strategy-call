@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset=UTF-8>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Strategy Call | AMZ One Step</title>
+	<meta name=description content="">
+	<meta name=keywords content="">
+	<meta name=robots content="noindex">
+	<link rel="shortcut icon" href="https://www.amzonestep.com/site/images/amz-fav-icon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css?ver=5.9.1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css" onload="this.media='all'">
+	<style>
+	input[type="checkbox"] {
+		transform: scale(1.5);
+		accent-color: black;
+		cursor: pointer;
+	}
+	
+	input[type="radio"] {
+		-ms-transform: scale(1.5);
+		/* IE 9 */
+		-webkit-transform: scale(1.5);
+		/* Chrome, Safari, Opera */
+		transform: scale(1.5);
+	}
+	
+	@media only screen and (max-width: 768px) {
+		input[type="radio"] {
+			transform: scale(1.2);
+		}
+	}
+	
+	body {
+		font-family: Muli, sans-serif;
+	}
+	
+	.navbar-expand-lg {
+		justify-content: space-between !important;
+	}
+	
+	.bg-dark {
+		background-color: black !important;
+	}
+	
+	.navbar-collapse {
+		flex-grow: 0;
+	}
+	
+	.nav-link {
+		color: white !important;
+	}
+	
+	@media (min-width: 992px) {
+		.navbar-expand-lg .navbar-nav .nav-link {
+			padding-right: 1rem !important;
+			padding-left: 1rem !important;
+		}
+	}
+	
+	.targetBtns {
+		background-color: #fd7e14;
+		border: none;
+		color: white !important;
+		padding: 12px 22px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		margin: -5px;
+		transition-duration: 0.4s;
+		font-weight: bold;
+		width: 135px;
+		border-radius: 0.25rem;
+	}
+	
+	.questionnaireBanner {
+		background-color: #071630;
+	}
+	
+	.h1 {
+		color: white;
+		font-size: 2.3rem;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.h1mob {
+			font-size: 1.5rem;
+		}
+	}
+	
+	.h2 {
+		font-weight: bold;
+		letter-spacing: 0.5px;
+	}
+	
+	.h3 {
+		color: white;
+		font-size: 1.2rem;
+		letter-spacing: 0.5px;
+	}
+	
+	.text-orange {
+		color: #f5812a;
+	}
+	
+	.diagonal {
+		width: 88%;
+		height: 100%;
+		background-color: #00b4a7;
+		transform: skewX(30deg);
+		transform-origin: top;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+	
+	.diagonal > span {
+		transform: skewX(-30deg);
+		color: white;
+		font-size: 28px;
+		font-weight: 500;
+	}
+	
+	.owl-carousel .item {
+		margin: 3px
+	}
+	
+	.owl-carousel .item img {
+		display: block;
+		width: 50%;
+		height: auto
+	}
+	
+	.owl-carousel .item {
+		margin: 3px
+	}
+	
+	.seen-on {
+		background-color: #eee;
+		border-top: 9px solid #00b4a7;
+	}
+	
+	@media only screen and (max-width: 1200px) {
+		.seen-on {
+			display: none !important;
+		}
+	}
+	
+	.para {
+		font-size: 18px;
+		letter-spacing: 0.5px;
+	}
+	
+	.page-footer {
+		background-color: black;
+	}
+	
+	.footerPara {
+		font-weight: 400 !important;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 17px;
+		letter-spacing: 0.5px;
+		color: white;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.footerPara {
+			font-size: 13px;
+		}
+	}
+	
+	.fixed-top {
+		position: sticky !important;
+	}
+	
+	.padding-para {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.padding-para {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	
+	.bold {
+		font-weight: bold;
+	}
+	
+	.klaviyo_default_styling .klaviyo_submit_button:after {
+		display: none;
+	}
+	
+	.form-check-input {
+		margin-top: 0.2rem;
+	}
+	
+	.klaviyo_default_styling label {
+		font-size: 22px!important;
+	}
+	</style>
+	<style>
+	#msform {
+		text-align: center;
+		position: relative;
+		margin-top: 20px;
+		max-width: 100%;
+	}
+	
+	#msform fieldset {
+		background: white;
+		border: 0 none;
+		border-radius: 0.5rem;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+		padding-bottom: 20px;
+		position: relative
+	}
+	
+	.form-card {
+		text-align: left
+	}
+	
+	#msform fieldset:not(:first-of-type) {
+		display: none;
+	}
+	
+	#msform .action-button {
+		width: 100px;
+		background: #00B4A7;
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 0px 0px 10px 5px;
+		float: right;
+		height: 44px;
+		border-radius: 38px;
+	}
+	
+	#msform .action-button:hover,
+	#msform .action-button:focus {
+		background-color: #00B4A7;
+	}
+	
+	#msform .action-button-previous {
+		width: 100px;
+		background: #F5812A;
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px 10px 0px;
+		/*float: right;*/
+		border-radius: 38px;
+	}
+	/*#msform .action-button-previous:hover,*/
+	/*#msform .action-button-previous:focus {*/
+	/* background-color: #000000;*/
+	/*}*/
+	
+	.card {
+		z-index: 0;
+		border: none;
+		position: relative;
+	}
+	
+	.fs-title {
+		font-size: 25px;
+		color: #00B4A7;
+		margin-bottom: 15px;
+		font-weight: bold;
+		text-align: left;
+	}
+	
+	.steps {
+		font-size: 20px;
+		color: gray;
+		margin-bottom: 10px;
+		font-weight: normal;
+		text-align: right;
+	}
+	
+	#progressbar li {
+		list-style-type: none;
+		font-size: 15px;
+		width: 25%;
+		float: left;
+		position: relative;
+		font-weight: 400;
+	}
+	
+	#progressbar li:before {
+		width: 50px;
+		height: 50px;
+		line-height: 45px;
+		display: block;
+		font-size: 20px;
+		color: #ffffff;
+		background: lightgray;
+		border-radius: 50%;
+		margin: 0 auto 10px auto;
+		padding: 2px
+	}
+	
+	#progressbar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: lightgray;
+		position: absolute;
+		left: 0;
+		top: 25px;
+		z-index: -1
+	}
+	
+	#progressbar li.active:before,
+	#progressbar li.active:after {
+		background: #00B4A7;
+	}
+	
+	.progress {
+		height: 20px;
+	}
+	
+	.progress-bar {
+		background-color: #00B4A7;
+	}
+	
+	.radio-inline {
+		position: relative;
+		display: inline-block;
+		padding-left: 20px;
+		margin-bottom: 0;
+		font-weight: 400;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+	
+	.radio-inline input[type=radio] {
+		margin-left: 15px;
+	}
+	
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+	
+	label {
+		display: inline-block;
+		margin-bottom: 0.5rem;
+		font-size: 18px;
+		letter-spacing: 0.5px;
+	}
+	
+	.theme-input-style {
+		border: 0;
+		border-bottom: 1px solid #F57917 !important;
+		height: 50px;
+		width: 100%;
+		padding: 0 20px;
+	}
+	
+	input:focus {
+		outline: 0;
+	}
+	
+	.form-container {
+		box-shadow: 0 5px 40px rgb(0 0 0 / 5%);
+		border-top: 10px solid #071630;
+	}
+	
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+	
+	.asterisk {
+		color: red;
+		margin-left: 3px;
+	}
+	
+	.klaviyo_header {
+		font-size: 50px;
+	}
+	
+	#email-error {
+		display: none;
+		color: red;
+		font-size: 15px;
+		font-weight: normal;
+		padding-top: 5px;
+	}
+	
+	.donthide {
+		opacity: 1 !important;
+		visibility: visible;
+		display: block !important;
+	}
+	
+	.telephone {
+		font-size: 1.5rem;
+		text-decoration: none !important;
+		color: #F5812A;
+	}
+	
+	.telephone:hover {
+		color: #F5812A !important;
+	}
+	
+	.radio-img {
+		width: 180px;
+		height: 180px;
+		padding: 20px;
+		cursor: pointer;
+	}
+	
+	.shadow-box {
+		box-shadow: 0 0px 25px 4px #d5d5d5 !important;
+		position: relative !important;
+		display: inline-block;
+		border-style: solid !important;
+		border-width: 0px !important;
+		border-color: rgba(0, 0, 0, 0) !important;
+		background-color: rgba(0, 0, 0, 0) !important;
+		transition: border 0.3s ease !important;
+		background: rgb(255, 255, 255) !important;
+		width: 250px;
+		height: 200px;
+	}
+	
+	.radioSize {
+		width: 70%;
+		height: 7.5em;
+	}
+	
+	.radioSize2 {
+		width: 100%;
+		height: 6.5em;
+	}
+	
+	.hide-radio {
+		top: 15%;
+		left: 23%;
+		opacity: 0;
+		cursor: pointer;
+	}
+	
+	.hide-radio2 {
+		top: 8%;
+		left: 9%;
+		opacity: 1;
+		cursor: pointer;
+	}
+	/*[type=radio] {*/
+	/* position: absolute;*/
+	/* opacity: 1;*/
+	/*}*/
+	
+	[type=radio]+img,
+	[type=radio]+h2 {
+		cursor: pointer;
+	}
+	
+	.label-text {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	
+	#msform .action-button {
+		float: none;
+	}
+	
+	.container-box {
+		display: flex;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.container-box {
+			display: block;
+		}
+	}
+	
+	.shadow-box + input[type=radio] {
+		cursor: pointer;
+	}
+	
+	input[type=radio]:checked + .radio-img {
+		background-color: #f6b17d;
+	}
+	
+	input[type=radio]:checked + .radio-h2 {
+		background-color: #f6b17d;
+	}
+	/*input[type=radio]:checked + .box {*/
+	/* color: white;*/
+	/* transform: translateY(70px);*/
+	/*}*/
+	/*.middle input[type=radio]:checked + .box span:before {*/
+	/* transform: translateY(0px);*/
+	/* opacity: 1;*/
+	/*}*/
+	/*.middle .box {*/
+	/* width: 200px;*/
+	/* height: 200px;*/
+	/* background-color: #fff;*/
+	/* transition: all 250ms ease;*/
+	/* will-change: transition;*/
+	/* display: inline-block;*/
+	/* text-align: center;*/
+	/* cursor: pointer;*/
+	/* position: relative;*/
+	/* font-family: "Inter", sans-serif;*/
+	/* font-weight: 900;*/
+	/*}*/
+	
+	.form-check .radio-img:active {
+		transform: translateY(10px);
+	}
+	
+	.form-check .radio-img {
+		left: 0;
+		right: 0;
+		transition: all 300ms ease;
+		user-select: none;
+	}
+	
+	.form-check .radio-img:before {
+		font-size: 1.2em;
+		font-family: FontAwesome;
+		display: block;
+		transform: translateY(-80px);
+		opacity: 0;
+		transition: all 300ms ease-in-out;
+		font-weight: normal;
+		color: white;
+	}
+	
+	input[type=radio]:not(:disabled) ~ .box {
+		cursor: pointer;
+	}
+	
+	input[type=radio]:checked + .box:before {
+		color: #3d3f43;
+		font-family: FontAwesome;
+		border: 2px solid #00c2c3;
+		content: "\f00c";
+		font-size: 24px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		background: white;
+		box-shadow: 0px 2px 5px -2px rgb(0 0 0 / 25%);
+	}
+	
+	input[type=radio]:checked + .box:after {
+		color: #3d3f43;
+		font-family: FontAwesome;
+		border: 2px solid #00c2c3;
+		content: "\f00c";
+		font-size: 24px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		background: white;
+		box-shadow: 0px 2px 5px -2px rgb(0 0 0 / 25%);
+	}
+	
+	span.text-lite {
+		font-weight: normal;
+	}
+	
+	.bg-gray {
+		background: #f8f8f8;
+	}
+	
+	.shadowbox {
+		box-shadow: 0 2px 6px -2px rgb(0 0 0 / 50%);
+	}
+	
+	.shadowbox:hover {
+		background: #efefef;
+	}
+	
+	.checkBoxIcon {
+		float: right;
+		position: static;
+		margin-top: 10px;
+	}
+	
+	.cursor-pointer {
+		cursor: pointer;
+	}
+	
+	.select-input {
+		border-color: #f3f3f3;
+		background-color: #f3f3f3;
+		border: 0;
+		height: 50px;
+		width: 100%;
+		padding: 0 20px;
+		outline: 0;
+	}
+	
+	.error-box {
+		text-align: center;
+		justify-content: center;
+		display: flex;
+	}
+	
+	.error-msg {
+		color: rgb(245, 129, 42);
+		display: none;
+		margin-top: 10px;
+	}
+	
+	.other-input {
+		display: none;
+	}
+	
+	.servicesName {
+		height: 480px;
+		overflow-y: unset;
+	}
+	
+	.servicesName option:checked {
+		background: orange !important;
+		color: white;
+	}
+	
+	textarea.asinURL {
+		outline: none;
+		height: 40px;
+		margin-top: 15px;
+	}
+	
+	.servicesName option::before {
+		content: "";
+	}
+	
+	.servicesName option:checked::after {
+		background: #080807 !important;
+		color: white;
+		content: "\2713";
+		margin-left: 10px;
+	}
+	
+	.country_code,
+	strategy_services {
+		width: 0px;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.multiselect_revenue {
+		font-size: 14px;
+		height: 40px;
+		width: 100%;
+		line-height: 35px;
+		border-radius: 4px;
+		box-shadow: none;
+		outline: none;
+		background-color: #fff;
+		color: #444f5b;
+		border: 1px solid #d9dbde;
+		font-weight: 400;
+		padding: 0 20px;
+		margin: 0;
+		transition: .1s border-color ease-in-out;
+		cursor: pointer;
+	}
+	/*Multiselect Services Styling*/
+	
+	.multiSelect {
+		width: 100%;
+		position: relative;
+	}
+	
+	.multiSelect *,
+	.multiSelect *::before,
+	.multiSelect *::after {
+		box-sizing: border-box;
+	}
+	
+	.multiSelect_dropdown {
+		font-size: 14px;
+		min-height: 35px;
+		line-height: 35px;
+		border-radius: 4px;
+		box-shadow: none;
+		outline: none;
+		background-color: #fff;
+		color: #444f5b;
+		border: 1px solid #d9dbde;
+		font-weight: 400;
+		padding: 0.5px 13px;
+		margin: 0;
+		transition: .1s border-color ease-in-out;
+		cursor: pointer;
+	}
+	
+	.multiSelect_dropdown.-hasValue {
+		padding: 5px 30px 5px 5px;
+		cursor: default;
+	}
+	
+	.multiSelect_dropdown.-open {
+		box-shadow: none;
+		outline: none;
+		padding: 4.5px 29.5px 4.5px 4.5px;
+		border: 1.5px solid #d9dbde;
+	}
+	
+	.multiSelect_arrow::before,
+	.multiSelect_arrow::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 2px;
+		height: 8px;
+		border-radius: 20px;
+		border-bottom: 8px solid #99A3BA;
+		top: 40%;
+		transition: all .15s ease;
+	}
+	
+	.multiSelect_arrow::before {
+		right: 18px;
+		-webkit-transform: rotate(-50deg);
+		transform: rotate(-50deg);
+	}
+	
+	.multiSelect_arrow::after {
+		right: 13px;
+		-webkit-transform: rotate(50deg);
+		transform: rotate(50deg);
+	}
+	
+	.multiSelect_list {
+		margin: 0;
+		margin-bottom: 25px;
+		padding: 0;
+		list-style: none;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		max-height: calc(10 * 31px);
+		top: 28px;
+		left: 0;
+		z-index: 9999;
+		right: 0;
+		background: #fff;
+		border-radius: 4px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+		transition: opacity 0.1s ease, visibility 0.1s ease, -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+		transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+		transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+		-webkit-transform: scale(0.8) translate(0, 4px);
+		transform: scale(0.8) translate(0, 4px);
+		border: 1px solid #d9dbde;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
+	}
+	
+	.multiSelect_option {
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+		-webkit-transform: translate(6px, 0);
+		transform: translate(6px, 0);
+		transition: all .15s ease;
+	}
+	
+	.multiSelect_option.-selected {
+		display: none;
+	}
+	
+	.multiSelect_option:hover {
+		color: white;
+		background: #F5812A;
+	}
+	
+	.multiSelect_text {
+		cursor: pointer;
+		display: block;
+		padding: 5px 13px;
+		color: #525c67;
+		font-size: 14px;
+		text-decoration: none;
+		outline: none;
+		position: relative;
+		transition: all .15s ease;
+	}
+	
+	.multiSelect_list.-open {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: scale(1) translate(0, 12px);
+		transform: scale(1) translate(0, 12px);
+		transition: opacity 0.15s ease, visibility 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+		transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+		transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+	}
+	
+	.multiSelect_list.-open + .multiSelect_arrow::before {
+		-webkit-transform: rotate(-130deg);
+		transform: rotate(-130deg);
+	}
+	
+	.multiSelect_list.-open + .multiSelect_arrow::after {
+		-webkit-transform: rotate(130deg);
+		transform: rotate(130deg);
+	}
+	
+	.multiSelect_list.-open .multiSelect_option {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(1) {
+		transition-delay: 10ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(2) {
+		transition-delay: 20ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(3) {
+		transition-delay: 30ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(4) {
+		transition-delay: 40ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(5) {
+		transition-delay: 50ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(6) {
+		transition-delay: 60ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(7) {
+		transition-delay: 70ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(8) {
+		transition-delay: 80ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(9) {
+		transition-delay: 90ms;
+	}
+	
+	.multiSelect_list.-open .multiSelect_option:nth-child(10) {
+		transition-delay: 100ms;
+	}
+	
+	.multiSelect_choice {
+		/*background: rgba(77, 132, 254, 0.1);*/
+		background: black;
+		color: white;
+		padding: 4px 8px;
+		line-height: 17px;
+		margin: 5px;
+		display: inline-block;
+		font-size: 13px;
+		border-radius: 30px;
+		cursor: pointer;
+		font-weight: 500;
+	}
+	
+	.multiSelect_deselect {
+		width: 12px;
+		height: 12px;
+		display: inline-block;
+		stroke: #b2bac3;
+		stroke-width: 4px;
+		margin-top: -1px;
+		margin-left: 2px;
+		vertical-align: middle;
+	}
+	
+	.multiSelect_choice:hover .multiSelect_deselect {
+		stroke: #a1a8b1;
+	}
+	
+	.multiSelect_noselections {
+		text-align: center;
+		padding: 7px;
+		color: #b2bac3;
+		font-weight: 450;
+		margin: 0;
+	}
+	
+	.multiSelect_placeholder {
+		position: absolute;
+		left: 20px;
+		font-size: 14px;
+		top: 8px;
+		padding: 0 4px;
+		background-color: #fff;
+		color: #b8bcbf;
+		pointer-events: none;
+		transition: all .1s ease;
+	}
+	
+	.multiSelect_dropdown.-open + .multiSelect_placeholder,
+	.multiSelect_dropdown.-open.-hasValue + .multiSelect_placeholder {
+		top: -11px;
+		left: 17px;
+		color: #444f5b;
+		font-size: 13px;
+	}
+	
+	.multiSelect_dropdown.-hasValue + .multiSelect_placeholder {
+		top: -11px;
+		left: 17px;
+		color: #6e7277;
+		font-size: 13px;
+	}
+	/*Multiselect Services Styling*/
+	</style>
+</head>
+
+<body>
+	<header id="header" class="fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="/"><img src=https://www.amzonestep.com/images/logo.png class="logo" height=70px></a>
+		</nav>
+	</header>
+	<div class="container form-container mt-5 mb-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center p-0 mt-3 mb-2">
+				<div class="card px-4 pt-4 pb-0 mb-3">
+					<form action="https://www.amzonestep.com/strategy-call-thanks" method="post" id="msform" name=myForm class="" novalidate>
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<br>
+						<h2 class="h2 text-center padding-para">Thanks for showing interest in AMZ One Step services to grow your business.</h2>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text"><span class="text-lite">Let's get started...</span> What's your full name?</label>
+										<div class="form-check">
+											<input type=text class="theme-input-style" placeholder="Your Full Name" id="last_name" name=last_name>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure1">This question is required</p><a type=button name=next class="next text-center action-button" id="next1"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="col-lg-12 pb-3">
+										<h3 class="text-center text-orange">Nice to meet you <i class="fa fa-smile align-middle"></i></h3></div>
+									<div class="form-group">
+										<label class="text-center label-text ml-3">What services are you looking for?</label>
+										<input id="00N8c00000dklfn" maxlength="255" name=Strategy_Services__c size="20" type=hidden class="form-control theme-input-style strategy_services invisible">
+										<div class="form-check">
+											<div class="multiSelect">
+												<select id="00N8c00000dkS8t" multiple="multiple" name=Services_Name__c class="multiSelect_field" data-placeholder="Services">
+													<option class="bg-gray cursor-pointer serviceIcon bg-gray shadowbox py-3 my-2 px-4" value="Product Photography">Product Photography </option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="Product Videography">Product Videography</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="A+ Content">A+ Content</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="Listing Copywriting">Listing Copywriting</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="3D Rendering">3D Rendering</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="Amazon PPC Management">Amazon PPC Management</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="Brand Registry">Brand Registry</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="Amazon Storefront or Posts">Amazon Storefront or Posts</option>
+													<option class="bg-gray cursor-pointer bg-gray shadowbox py-3 my-2 px-4" value="Other">Other</option>
+												</select>
+											</div>
+											<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+												<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
+													<g stroke-linecap="round" stroke-linejoin="round">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</g>
+												</symbol>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure2">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a><a type=button name=next class="next text-center action-button" id="next2"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="col-lg-12 pb-3">
+										<h3 class="text-center text-orange">Great! Let's Talk Brand...</h3></div>
+									<div class="form-group">
+										<label class="text-center label-text">What is the name of your brand?</label>
+										<div class="form-check">
+											<input type=text class="theme-input-style" placeholder="Your Brand Name" id="00N8c00000dij3T" name=Brand_Name__c>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure3">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a><a type=button name=next class="next text-center action-button" id="next3"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text ml-3">What is your monthly Amazon revenue?</label>
+										<div class="form-check">
+											<select class="select-input multiselect_revenue" id="00N8c00000dkPvQ" name=Monthly_Revenue__c>
+												<option value="" selected disabled hidden>Please select</option>
+												<option value="Brand new on Amazon, no sales">Brand new on Amazon, no sales.</option>
+												<option value="$1 - $10,000">$1 - $10,000</option>
+												<option value="$10,001 - $25,000">$10,001 - $25,000</option>
+												<option value="$25,001 - $50,000">$25,001 - $50,000</option>
+												<option value="$50,001 - $100,000">$50,001 - $100,000</option>
+												<option value="$100,001 - $500,000">$100,001 - $500,000</option>
+												<option value="$500,001 - $1,000,000">$500,001 - $1,000,000</option>
+												<option value="$1,000,000+">$1,000,000+</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure4">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a><a type=button name=next class="next text-center action-button" id="next4"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text">Please provide an ASIN or Storefront URL(Optional for new sellers)</label>
+										<div class="form-check">
+											<textarea type=text class="theme-input-style asinURL" placeholder="ASIN or Storefront URL" name=ASIN__c id="00N8c00000djks1"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure5">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a><a type=button name=next class="next text-center action-button" id="next5"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5" id="step6">
+							<div class="form-card">
+								<div class="row justify-content-center text-center">
+									<div class="form-group">
+										<label class="text-center label-text ml-3">How would you like us to contact you?</label>
+										<div class="form-check">
+											<select class="select-input multiselect_revenue" id="00N8c00000dkQHq" name=How_would_you_like_us_to_contact_you__c>
+												<option value="" selected disabled hidden>Please select</option>
+												<option value="Text">Text</option>
+												<option value="Video Call" class="videoCall">Video Call</option>
+												<option value="Phone Call">Phone Call</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure6">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a><a type=button name=next class="next text-center action-button" id="next6"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5" id="step7">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text">What is your phone number?</label>
+										<div class="form-check d-flex">
+											<input id="00N8c00000dkW2t" maxlength="80" name=Country_Code__c size="20" type=hidden class="form-control theme-input-style country_code invisible">
+											<input type=number class="form-control theme-input-style" placeholder="Your Phone Number" name=phone id="phone">
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure7">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a><a type=button name=next class="next text-center action-button" id="next7"><i class="fa fa-arrow-right"></i></a></fieldset>
+						<fieldset class="stepstohide my-5" id="step8">
+							<div class="form-card">
+								<div class="row justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text"><span class="text-lite">Last Question...</span> What is your email address?</label>
+										<div class="form-check">
+											<input type=text autocomplete="off" class="theme-input-style" placeholder="Your Email" name=email id="email">
+											<label id="email-error" class="error" for="email">Please enter a valid email address</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="error-msg" id="failure8">This question is required</p><a type=button name=previous class="previous text-center action-button-previous"><i class="fa fa-arrow-left"></i></a>
+							<button type=submit id="submitBtn" onclick="postLeadToSFDC()" name=btn_submit class="next text-center action-button">Submit</button>
+						</fieldset>
+					
+					</form>
+					<script>
+					function postLeadToSFDC() {
+						const requestOptions = {
+							method: 'POST',
+							mode: 'no-cors',
+						};
+						const oid = "00D8c000002hzJR";
+						const retUrl = "https://www.amzonestep.com/strategy-call-thanks";
+						const lastName = document.getElementById('last_name').value;
+						const strategyservices = document.getElementById('00N8c00000dklfn').value;
+						const services = "NULL";
+						const brand = document.getElementById('00N8c00000dij3T').value;
+						const revenue = document.getElementById('00N8c00000dkPvQ').value;
+						const asin = document.getElementById('00N8c00000djks1').value;
+						const contact = document.getElementById('00N8c00000dkQHq').value;
+						const countrycode = document.getElementById('00N8c00000dkW2t').value;
+						const phone = document.getElementById('phone').value;
+						const email = document.getElementById('email').value;
+						fetch(`https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&oid=${oid}&retURL=${retUrl}&last_name=${lastName}&00N8c00000dklfn=${strategyservices}&00N8c00000dkS8t=${services}&00N8c00000dij3T=${brand}&00N8c00000dkPvQ=${revenue}&00N8c00000djks1=${asin}&00N8c00000dkQHq=${contact}&00N8c00000dkW2t=${countrycode}&phone=${phone}&email=${email}`, requestOptions).then((response) => response.text()).then((result) => console.log(result)).catch((error) => console.log('error', error));
+					}
+					document.addEventListener('DOMContentLoaded', function() {
+						document.getElementById('submitBtn').addEventListener('onclick', () => {
+							postLeadToSFDC();
+						});
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="page-footer justify-content-center text-center py-4"><img src=https://www.amzonestep.com/images/logo.png class="logoResize" alt="logo">
+		<br>
+		<div class="container">
+			<p class="footerPara">AMZ One Step has been in the online service since 2014 with a group of experienced e-commerce experts having an astute understanding of the online business framework’s dependence on quality-driven listing creation and optimization. In a highly competitive market like Amazon, product visibility determines the market share and if your listing is not enticing to the customer, it will not be able to compete. Keeping all this in mind, we hold ourselves to a high standard and are committed to delivering on our mission. </p>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin=anonymous referrerpolicy="no-referrer"></script>
+	<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js></script>
+	<link rel="stylesheet" type=text/css href="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/css/inputmask.min.css">
+	<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js></script>
+	<script src=https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js></script>
+	<script>
+	jQuery(document).ready(function($) {
+		var current_fs;
+		var next_fs;
+		var previous_fs;
+		var opacity;
+		var current = 1;
+		var steps = $("fieldset").length;
+		setProgressBar(current);
+		$("#next1").click(function() {
+			if(!$("input[name='last_name']:input").val()) {
+				$("#failure1").show(200);
+				$("#failure1").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#next2").click(function() {
+			if(!($('select[id="00N8c00000dkS8t"]').find(":selected").val())) {
+				$("#failure2").show(200);
+				$("#failure2").fadeOut(1500);
+				return false;
+			}
+			if($(".other-input").is(":visible")) {
+				if($('.other-specify').val() == 0) {
+					$("#failure2").show(200);
+					$("#failure2").fadeOut(1500);
+					return false;
+				}
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#next3").click(function() {
+			if(!$("input[name='Brand_Name__c']:input").val()) {
+				$("#failure3").show(200);
+				$("#failure3").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#next4").click(function() {
+			if(!($('select[name="Monthly_Revenue__c"]').find(":selected").val())) {
+				$("#failure4").show(200);
+				$("#failure4").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#next5").click(function() {
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#next6").click(function() {
+			if(!($('select[name="How_would_you_like_us_to_contact_you__c"]').find(":selected").val())) {
+				$("#failure6").show(200);
+				$("#failure6").fadeOut(1500);
+				return false;
+			}
+			if($('.videoCall').is(':selected')) {
+				current_fs = $("#step6").hide();
+				next_fs = $("#step8");
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+				next_fs.show();
+				current_fs.animate({
+					opacity: 0
+				}, {
+					step: function(now) {
+						opacity = 1 - now;
+						current_fs.css({
+							'display': 'none',
+							'position': 'relative'
+						});
+						next_fs.css({
+							'opacity': opacity
+						});
+					},
+					duration: 500
+				});
+				setProgressBar(2 + current);
+			} else {
+				current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+				next_fs.show();
+				current_fs.animate({
+					opacity: 0
+				}, {
+					step: function(now) {
+						opacity = 1 - now;
+						current_fs.css({
+							'display': 'none',
+							'position': 'relative'
+						});
+						next_fs.css({
+							'opacity': opacity
+						});
+					},
+					duration: 500
+				});
+				setProgressBar(++current);
+			}
+		});
+		$("#next7").click(function() {
+			if(!$("input[name='phone']:input").val()) {
+				$("#failure7").show(200);
+				$("#failure7").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#submitBtn").click(function() {
+			if(!ValidateEmail($("#email").val())) {
+				$("#email-error").show(200);
+				$("#email-error").fadeOut(1500);
+				return false;
+			}
+			if(!$("input[name='email']:input").val()) {
+				$("#failure8").show(200);
+				$("#failure8").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$(".previous").click(function() {
+			if($(".videoCall").prop('selected') == true) {
+				current_fs = $(this).parent().hide();
+				previous_fs = $("#step6");
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+				previous_fs.show();
+				current_fs.animate({
+					opacity: 0
+				}, {
+					step: function(now) {
+						opacity = 1 - now;
+						current_fs.css({
+							'display': 'none',
+							'position': 'relative'
+						});
+						previous_fs.css({
+							'opacity': opacity
+						});
+					},
+					duration: 500
+				});
+			} else {
+				current_fs = $(this).parent();
+				previous_fs = $(this).parent().prev();
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+				previous_fs.show();
+				current_fs.animate({
+					opacity: 0
+				}, {
+					step: function(now) {
+						opacity = 1 - now;
+						current_fs.css({
+							'display': 'none',
+							'position': 'relative'
+						});
+						previous_fs.css({
+							'opacity': opacity
+						});
+					},
+					duration: 500
+				});
+				setProgressBar(--current);
+			}
+		});
+
+		function setProgressBar(curStep) {
+			var percent = parseFloat(100 / steps) * curStep;
+			percent = percent.toFixed();
+			$(".progress-bar").css("width", percent + "%");
+		}
+		$(".submit").click(function() {
+			return false;
+		});
+		$(".other-box").click(function() {
+			if($(".checkboxOther").prop('checked') == true) {
+				$(".other-input").show();
+			} else {
+				$(".other-input").hide();
+			}
+		});
+		$("#msform").validate({
+			rules: {
+				email: {
+					required: true,
+					email: true,
+					regex: /^\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i,
+					return: false,
+				}
+			},
+			messages: {
+				email: "Please enter a valid email address",
+			},
+			submitHandler: function(form) {
+				if($(form).valid()) form.submit();
+				return false;
+			}
+		});
+	});
+	</script>
+	<script>
+	jQuery(function() {
+		jQuery('.multiSelect').each(function(e) {
+			var self = jQuery(this);
+			var field = self.find('.multiSelect_field');
+			var fieldOption = field.find('option');
+			var placeholder = field.attr('data-placeholder');
+			field.hide().after(`<div class="multiSelect_dropdown"></div><span class="multiSelect_placeholder">` + placeholder + `</span><ul class="multiSelect_list"></ul><span class="multiSelect_arrow"></span>`);
+			fieldOption.each(function(e) {
+				jQuery('.multiSelect_list').append(`<li class="multiSelect_option" data-value="` + jQuery(this).val() + `"><a class="multiSelect_text">` + jQuery(this).text() + `</a></li>`);
+			});
+			var dropdown = self.find('.multiSelect_dropdown');
+			var list = self.find('.multiSelect_list');
+			var option = self.find('.multiSelect_option');
+			var optionText = self.find('.multiSelect_text');
+			dropdown.attr('data-multiple', 'true');
+			list.css('top', dropdown.height() + 5);
+			option.click(function(e) {
+				var self = jQuery(this);
+				e.stopPropagation();
+				self.addClass('-selected');
+				field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
+				dropdown.append(function(e) {
+					return jQuery('<span class="multiSelect_choice">' + self.children().text() + '<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function(e) {
+						var self = jQuery(this);
+						e.stopPropagation();
+						self.remove();
+						list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
+						list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+						field.find('option:contains(' + self.text() + ')').prop('selected', false);
+						if(dropdown.children(':visible').length === 0) {
+							dropdown.removeClass('-hasValue');
+						}
+					});
+				}).addClass('-hasValue');
+				list.css('top', dropdown.height() + 5);
+				if(!option.not('.-selected').length) {
+					list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+				}
+			});
+			dropdown.click(function(e) {
+				e.stopPropagation();
+				e.preventDefault();
+				dropdown.toggleClass('-open');
+				list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
+			});
+			jQuery(document).on('click touch', function(e) {
+				if(dropdown.hasClass('-open')) {
+					dropdown.toggleClass('-open');
+					list.removeClass('-open');
+				}
+			});
+		});
+	});
+	</script>
+	<script>
+	jQuery(document).ready(function() {
+		$("#phone").intlTelInput({
+			separateDialCode: true,
+			hiddenInput: "full_phone",
+			utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+		});
+		var areacode = $('.selected-dial-code').text();
+		$(".country_code").val(areacode);
+		jQuery('#next2').click(function() {
+			var addservice = [];
+			$.each($("#00N8c00000dkS8t option:selected"), function() {
+				addservice.push($(this).val());
+			});
+			$(".strategy_services").val(addservice.join(", "));
+		});
+		jQuery('.flag-container').click(function() {
+			var areacode = $('.selected-dial-code').text();
+			$(".country_code").val(areacode);
+		});
+	});
+
+	function ValidateEmail(email) {
+		var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		return expr.test(email);
+	}
+	</script>
+	<script>
+	window.onscroll = function() {
+		scrollFunction()
+	};
+
+	function scrollFunction() {
+		if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+			document.getElementById("header").style.backgroundColor = "black";
+		} else {
+			document.getElementById("header").style.backgroundColor = "black";
+		}
+	}
+	</script>
+</body>
+
+</html>
